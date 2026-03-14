@@ -1,19 +1,14 @@
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
 <script>
 window.addEventListener("load", () => {
-  // Create the Crate instance
   const crate = new Crate({
     server: "1482217825014775992",
     channel: "1482217826889765068"
   });
 
-  // Open immediately
   crate.toggle(true);
-
-  // Hide the floating button
   crate.hide();
 
-  // Make it fullscreen by adjusting the iframe container
   const interval = setInterval(() => {
     const el = document.querySelector(".widgetbot-crate");
     if (el) {
@@ -23,7 +18,7 @@ window.addEventListener("load", () => {
       el.style.left = "0";
       el.style.width = "100vw";
       el.style.height = "100vh";
-      el.style.zIndex = "9999"; // on top of everything
+      el.style.zIndex = "9999";
     }
   }, 100);
 });
