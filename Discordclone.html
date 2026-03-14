@@ -1,25 +1,34 @@
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer></script>
-<script>
-window.addEventListener("load", () => {
-  const crate = new Crate({
-    server: "1482217825014775992",
-    channel: "1482217826889765068"
-  });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GN MATH TOOLS - Discord</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+  }
 
-  crate.toggle(true);
-  crate.hide();
+  iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+  }
+</style>
+</head>
+<body>
 
-  const interval = setInterval(() => {
-    const el = document.querySelector(".widgetbot-crate");
-    if (el) {
-      clearInterval(interval);
-      el.style.position = "fixed";
-      el.style.top = "0";
-      el.style.left = "0";
-      el.style.width = "100vw";
-      el.style.height = "100vh";
-      el.style.zIndex = "9999";
-    }
-  }, 100);
-});
-</script>
+<iframe 
+  src="https://e.widgetbot.io/channels/1482217825014775992/1482217826889765068/?preset=crate&api=c3946c28-f177-41b8-a587-2edda6a86ad2"
+  allow="microphone; camera; autoplay; clipboard-read; clipboard-write"
+  sandbox="allow-scripts allow-same-origin allow-popups"
+></iframe>
+
+</body>
+</html>
